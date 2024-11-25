@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Presence {
+  bool a = 1;
+  optional bool b = 2;
+}
+
+message Example {
+  int32 amount = 1;
+  bytes data = 2;
+}
+
+enum Format {
+  FORMAT_UNSPECIFIED = 0;
+  FORMAT_BINARY = 1;
+  FORMAT_JSON = 2;
+}
