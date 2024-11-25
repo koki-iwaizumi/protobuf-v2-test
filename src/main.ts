@@ -1,6 +1,8 @@
-import { create } from "@bufbuild/protobuf";
+import { create, type MessageInitShape } from "@bufbuild/protobuf";
 import { PresenceSchema } from "./gen/example_pb";
 
 const presence = create(PresenceSchema);
 
-console.log(presence)
+const presenceInitShape: MessageInitShape<typeof PresenceSchema> = {};
+
+console.log(presence, presenceInitShape)
